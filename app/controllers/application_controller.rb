@@ -9,6 +9,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/' do
+<<<<<<< HEAD
      redirect to "/articles"
   end
 #redirect to index 
@@ -59,3 +60,19 @@ class ApplicationController < Sinatra::Base
 
 
 end
+=======
+    
+  end
+  
+  get '/articles/new' do
+    erb :new
+  end
+  
+  get '/articles' do
+    @aricles = Articles.find(params[:id]) 
+    erb :show
+  end
+  
+  
+end
+>>>>>>> 7d4bef732aa75d375f40f8fbda4bf08d178bdc6b
